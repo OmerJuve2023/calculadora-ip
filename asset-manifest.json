@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/calculadora-ip/static/css/main.96a16c16.css",
-    "main.js": "/calculadora-ip/static/js/main.0c903380.js",
+    "main.js": "/calculadora-ip/static/js/main.4c8b934a.js",
     "static/js/787.2287992b.chunk.js": "/calculadora-ip/static/js/787.2287992b.chunk.js",
     "static/media/bootstrap-icons.woff?": "/calculadora-ip/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/calculadora-ip/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "index.html": "/calculadora-ip/index.html",
     "main.96a16c16.css.map": "/calculadora-ip/static/css/main.96a16c16.css.map",
-    "main.0c903380.js.map": "/calculadora-ip/static/js/main.0c903380.js.map",
+    "main.4c8b934a.js.map": "/calculadora-ip/static/js/main.4c8b934a.js.map",
     "787.2287992b.chunk.js.map": "/calculadora-ip/static/js/787.2287992b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96a16c16.css",
-    "static/js/main.0c903380.js"
+    "static/js/main.4c8b934a.js"
   ]
 }

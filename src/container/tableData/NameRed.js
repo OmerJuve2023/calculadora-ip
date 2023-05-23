@@ -1,26 +1,29 @@
-import PropTypes from "prop-types";
+import React from "react";
 
-export const NameRed = ({nameNetwork}) => {
-    NameRed.prototype = {
-        nameNetwork: PropTypes.string.isRequired
-    }
-    let nameNetworkIP=""
-    function convertBinaryToDecimal(nameNetwork) {
+export const NameRed = () => {
+
+    let nameNetwork = localStorage.getItem("NAME_NETWORK")
+
+    function process(nameNetwork) {
         const octets = [];
         for (let i = 0; i < nameNetwork.length; i += 8) {
             const octet = nameNetwork.substr(i, 8);
             octets.push(parseInt(octet, 2));
         }
-        nameNetworkIP=octets.join('.')
-        localStorage.setItem("NAME-NETWORK",nameNetwork)
-        return nameNetworkIP
+        return octets.join('.')
     }
 
     return (
-        <th className={"h6"}
-            colSpan={4}
-            style={{color: "#3586FF"}}>
-            {convertBinaryToDecimal(nameNetwork)}
-        </th>
+        <tr>
+            <th className={"h5"}
+                style={{color: "#b4122f"}}
+            >Nombre de Red
+            </th>
+            <td className={"h5 fw-bold"}
+                style={{"color": "#3586FF"}}
+            >
+                {process(nameNetwork)}
+            </td>
+        </tr>
     )
 }

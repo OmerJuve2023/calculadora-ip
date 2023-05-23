@@ -7,7 +7,7 @@ export const DireccIp = () => {
     const [possibleIPs, setPossibleIPs] = useState([]);
 
     useEffect(() => {
-        const storedNetworkIP = localStorage.getItem("nameNetwork");
+        const storedNetworkIP = localStorage.getItem("NAME_RED");
         const storedHostBits = localStorage.getItem("hosts");
 
         if (storedNetworkIP && storedHostBits) {

@@ -35,7 +35,7 @@ export const TableRed = ({ip, mascara}) => {
             arrayNameNetwork.push("0")
         }
     }
-
+    localStorage.setItem("NAME_NETWORK",nameNetwork)
     const process = (object) => {
         let table = []
         table.push(
@@ -95,7 +95,7 @@ export const TableRed = ({ip, mascara}) => {
                 <tr>
                     {process(arrayNameNetwork)}
                 </tr>
-               {/* <tr>
+                {/* <tr>
                     <th className={"h5"}
                         colSpan={4}
                         style={{color: "#b4122f"}}>

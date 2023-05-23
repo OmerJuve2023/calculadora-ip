@@ -12,7 +12,7 @@ function convertIpToBinary(ip) {
 }
 
 function clearLocalStorage() {
-    localStorage.removeItem("NAME-NETWORK")
+    localStorage.removeItem("NAME_NETWORK")
     localStorage.removeItem("NUMBER_HOSTS")
     localStorage.removeItem("NUMBER_BITS")
     localStorage.removeItem("NUMBER_IP")

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {Methods} from "../components/Methods";
 import {ProcessBinary} from "../container/processBinary";
-import {ClaseIP} from "../container/ClaseIP";
 import {TableRed} from "../container/TableRed";
 import {DireccIp} from "../container/DireccIp";
+import {TableData} from "../container/tableData/TableData";
 
 export function PPrincipal() {
     const [ip, setIP] = useState("");
@@ -21,6 +21,8 @@ export function PPrincipal() {
         setBinaryIP(Methods.convertToBinary(ip))
         setBinaryMaskNetwork(Methods.convertToBinary(maskNetwork))
         setEnable(true)
+        localStorage.setItem("NUMBER_IP", ip)
+        localStorage.setItem("NUMBER_MASK-NETWORK", maskNetwork)
     }
 
     const clearResults = () => {
@@ -29,10 +31,7 @@ export function PPrincipal() {
         setMaskNetwork("")
         setBinaryMaskNetwork("")
         setEnable(false)
-        localStorage.removeItem("nameNetwork")
-        localStorage.removeItem("host")
-        localStorage.removeItem("hosts")
-        localStorage.removeItem("numberBits")
+        Methods.clearLocalStorage()
     }
 
     return (
@@ -78,9 +77,6 @@ export function PPrincipal() {
             {enable && (
                 <div className={"my-5"}>
                     <div>
-                        <ClaseIP ip={ip} maskNetwork={maskNetwork}/>
-                    </div>
-                    <div>
                         <ProcessBinary ip={ip} title={"Proceso IP"}/>
                     </div>
                     <div>
@@ -90,11 +86,13 @@ export function PPrincipal() {
                         <TableRed ip={binaryIP} mascara={binaryMaskNetwork}/>
                     </div>
                     <div>
-                        <DireccIp/>
+                        <TableData/>
+                    </div>
+                    <div className={"my-3"}>
+                        {/*<DireccIp/>*/}
                     </div>
                 </div>
             )}
-
         </div>
     )
 }

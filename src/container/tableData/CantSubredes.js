@@ -1,22 +1,22 @@
 import React from "react";
 
-export const CantHosts = () => {
-    const cantHosts = parseInt(localStorage.getItem("hosts"))
+export const CantSubredes = () => {
+    const cantSubredes = parseInt(localStorage.getItem("NUMBER_BITS"))
 
-    function process(cantHosts) {
-        return (Math.pow(2,cantHosts))-2
+    function process(cantSubredes) {
+        return (Math.pow(2, cantSubredes))
     }
 
     return (
         <tr>
             <th className={"h5"}
                 style={{color: "#b4122f"}}
-            >Cantidad max. direcciones Hosts
+            >Cantidad max. direcciones Subredes
             </th>
             <td className={"h5 fw-bold"}
                 style={{"color": "#3586FF"}}
             >
-                {process(cantHosts)}
+                {process(cantSubredes)}
             </td>
         </tr>
     )

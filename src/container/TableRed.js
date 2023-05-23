@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {NameRed} from "./NameRed";
+import {NameRed} from "./tableData/NameRed";
 
 export const TableRed = ({ip, mascara}) => {
 

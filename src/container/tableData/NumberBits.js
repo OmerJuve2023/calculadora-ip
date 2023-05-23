@@ -1,11 +1,7 @@
-import PropTypes from "prop-types";
 import React from "react";
 
-export const NumberBits = ({mask}) => {
-
-    NumberBits.propTypes = {
-        mask: PropTypes.string.isRequired,
-    }
+export const NumberBits = () => {
+    const mask = localStorage.getItem("NUMBER_MASK-NETWORK").toString()
     const calculateNetworkLength = (mask) => {
         let networkLengthCount = 0
         const maskOctets = mask.split(".")
@@ -19,7 +15,7 @@ export const NumberBits = ({mask}) => {
                 }
             }
         }
-        localStorage.setItem("numberBits",networkLengthCount.toString())
+        localStorage.setItem("NUMBER_BITS", networkLengthCount.toString())
         return networkLengthCount
     }
 

@@ -12,7 +12,7 @@ export const NameRed = ({nameNetwork}) => {
             octets.push(parseInt(octet, 2));
         }
         nameNetworkIP=octets.join('.')
-        localStorage.setItem("nameNetwork",nameNetwork)
+        localStorage.setItem("NAME-NETWORK",nameNetwork)
         return nameNetworkIP
     }
 

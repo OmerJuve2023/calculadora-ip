@@ -10,7 +10,7 @@ export const TableData = () => {
     return (
         <div className={" row justify-content-center my-5"}>
             <div className={"col-6"}>
-                <table>
+                <table className={"table"}>
                     <tbody>
                     <ClaseIP/>
                     <NumberBits/>

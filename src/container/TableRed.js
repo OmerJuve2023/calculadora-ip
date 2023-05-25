@@ -95,16 +95,7 @@ export const TableRed = ({ip, mascara}) => {
                 <tr>
                     {process(arrayNameNetwork)}
                 </tr>
-                {/* <tr>
-                    <th className={"h5"}
-                        colSpan={4}
-                        style={{color: "#b4122f"}}>
-                        Nombre de la Red Decimal
-                    </th>
-                </tr>
-                <tr>
-                    <NameRed nameNetwork={nameNetwork}/>
-                </tr>*/}
+
                 </tbody>
             </table>
         </div>

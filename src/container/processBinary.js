@@ -6,10 +6,7 @@ export const ProcessBinary = ({ip, title}) => {
         ip: PropTypes.func.isRequired,
         title: PropTypes.func.isRequired
     }
-    let p1 = parseInt(ip.substring(0, 3))
-    let p2 = parseInt(ip.substring(4, 7))
-    let p3 = parseInt(ip.substring(8, 11))
-    let p4 = parseInt(ip.substring(12, 16))
+    const [p1, p2, p3, p4] = ip.split(".")
     const [enableProcess, setEnableProcess] = useState(false)
     let contador = 0
 
@@ -28,7 +25,8 @@ export const ProcessBinary = ({ip, title}) => {
                     resultado = contador
                 }
                 tables.push(
-                    <td>
+                    <td className={"text-nowrap"}
+                        style={{textAlign: "center", alignItems: "center"}}>
                         {Resta(value, contador, octeto, resultado)}
                     </td>
                 )
@@ -41,23 +39,26 @@ export const ProcessBinary = ({ip, title}) => {
         contador = parseInt(object)
         if (enableProcess)
             for (let i = 7; i >= 0; i--) {
-                let a = Math.pow(2, i)
+                let octeto = Math.pow(2, i)
                 tables.push(
-                    <td>
-                        <div className={"row row-cols-sm-5"}
-                             style={{"textAlign": "center", "alignItems": "center"}}
+                    <td className="text-nowrap">
+                        <div className="row row-cols-sm-3"
+                             style={{textAlign: "center", alignItems: "center"}}
                              key={i}>
-                            <div className={"col-auto mx-1"} style={{fontSize: "14px"}}>{contador}</div>
-                            <div className={"col-auto mx-1"} style={{color: "#DE556E", fontSize: "14px"}}>
-                                >=
+                            <div className="col-auto "
+                                 style={{fontSize: "14px"}}>{contador}</div>
+                            <div className="col-auto "
+                                 style={{color: "#DE556E", fontSize: "14px"}}>
+                                &gt;=
                             </div>
-                            <div className={"col-auto mx-1"} style={{fontSize: "14px"}}>
-                                {a}
+                            <div className="col-auto "
+                                 style={{fontSize: "14px"}}>
+                                {octeto}
                             </div>
                         </div>
                     </td>
                 )
-                convertBinary(object, a)
+                convertBinary(object, octeto)
             }
         return tables
     }
@@ -72,7 +73,7 @@ export const ProcessBinary = ({ip, title}) => {
                                 colSpan={8}>Preguntar la Condición
                             </th>
                         </tr>
-                        <tr className={""} style={{"textAlign": "center", color: "#b4122f"}}>
+                        <tr style={{"textAlign": "center", color: "#b4122f"}}>
                             <th>128</th>
                             <th>64</th>
                             <th>32</th>
@@ -82,7 +83,7 @@ export const ProcessBinary = ({ip, title}) => {
                             <th>2</th>
                             <th>1</th>
                         </tr>
-                        <tr>
+                        <tr style={{textAlign: "center"}}>
                             {process01(object)}
                         </tr>
                         <tr>
@@ -112,27 +113,27 @@ export const ProcessBinary = ({ip, title}) => {
     function Resta(value, contador, octeto, resultado) {
         if (value) {
             return (
-                <div className={"row row-cols-auto"}>
-                    <p className={"col-auto mx-1 my-0"}
+                <div className={"row row-cols-sm-5"}>
+                    <div className={"col-auto"}
                        style={{fontSize: "14px"}}>
                         {contador}
-                    </p>
-                    <p className={"col-auto mx-0 my-0"}
+                    </div>
+                    <div className={"col-auto"}
                        style={{color: "#DE556E", fontSize: "14px"}}>
                         ─
-                    </p>
-                    <p className={"col-auto mx-0 my-0"}
+                    </div>
+                    <div className={"col-auto"}
                        style={{fontSize: "14px"}}>
                         {octeto}
-                    </p>
-                    <p className={"col-auto mx-0 my-0"}
+                    </div>
+                    <div className={"col-auto"}
                        style={{color: "#DE556E", fontSize: "14px"}}>
                         =
-                    </p>
-                    <p className={"col-auto mx-1 my-0 text-sm-center"}
+                    </div>
+                    <div className={"col-auto"}
                        style={{color: "#DE8155", fontSize: "15px"}}>
                         {resultado}
-                    </p>
+                    </div>
                 </div>
             )
         } else {

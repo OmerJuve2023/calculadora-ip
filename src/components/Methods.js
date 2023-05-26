@@ -1,6 +1,7 @@
 export const Methods = {
     convertToBinary: convertIpToBinary,
-    clearLocalStorage: clearLocalStorage
+    clearLocalStorage: clearLocalStorage,
+    convertMaskBitsToDecimal: convertMaskBitsToDecimal
 }
 
 function convertIpToBinary(ip) {
@@ -9,6 +10,17 @@ function convertIpToBinary(ip) {
         return parseInt(octet, 10).toString(2).padStart(8, '0')
     })
     return binaryOctets.join('.');
+}
+
+function convertMaskBitsToDecimal(maskBits) {
+    // Convierte los bits de la máscara a una cadena de '1' seguido de ceros
+    const maskBinary = '1'.repeat(maskBits) + '0'.repeat(32 - maskBits);
+    // Divide los bits en grupos de 8 bits (octetos)
+    const octets = maskBinary.match(/.{1,8}/g);
+    // Convierte cada octeto de bits a decimal
+    const decimalOctets = octets.map((octet) => parseInt(octet, 2));
+    // Retorna la máscara de red en formato decimal separada por puntos
+    return decimalOctets.join('.');
 }
 
 function clearLocalStorage() {

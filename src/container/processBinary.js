@@ -18,23 +18,21 @@ export const ProcessBinary = ({ip, title}) => {
         contador = parseInt(object)
         if (enableProcess)
             for (let i = 7; i >= 0; i--) {
-                let a = Math.pow(2, i)
-                let b = contador - a
+                let value = false
+                let octeto = Math.pow(2, i)
+                let resultado = 0
+                if (contador >= octeto) {
+                    resultado = contador - octeto
+                    value = true
+                } else {
+                    resultado = contador
+                }
                 tables.push(
                     <td>
-                        <div className={"row row-cols-sm-5"} key={i}>
-                            <div className={"col-auto mx-1 my-0"} style={{fontSize: "14px"}}>{contador}</div>
-                            <div className={"col-auto mx-0 my-0"} style={{color: "#DE556E", fontSize: "14px"}}>-</div>
-                            <div className={"col-auto mx-0 my-0"} style={{fontSize: "14px"}}>{a}</div>
-                            <div className={"col-auto mx-0 my-0"} style={{color: "#DE556E", fontSize: "14px"}}>=</div>
-                            <div className={"col-auto mx-1 my-0 text-sm-center"}
-                                 style={{color: "#DE8155", fontSize: "15px"}}>
-                                {b}
-                            </div>
-                        </div>
+                        {Resta(value, contador, octeto, resultado)}
                     </td>
                 )
-                convertBinary(object, a)
+                convertBinary(object, octeto)
             }
         return tables
     }
@@ -111,6 +109,45 @@ export const ProcessBinary = ({ip, title}) => {
         )
     }
 
+    function Resta(value, contador, octeto, resultado) {
+        if (value) {
+            return (
+                <div className={"row row-cols-auto"}>
+                    <p className={"col-auto mx-1 my-0"}
+                       style={{fontSize: "14px"}}>
+                        {contador}
+                    </p>
+                    <p className={"col-auto mx-0 my-0"}
+                       style={{color: "#DE556E", fontSize: "14px"}}>
+                        ─
+                    </p>
+                    <p className={"col-auto mx-0 my-0"}
+                       style={{fontSize: "14px"}}>
+                        {octeto}
+                    </p>
+                    <p className={"col-auto mx-0 my-0"}
+                       style={{color: "#DE556E", fontSize: "14px"}}>
+                        =
+                    </p>
+                    <p className={"col-auto mx-1 my-0 text-sm-center"}
+                       style={{color: "#DE8155", fontSize: "15px"}}>
+                        {resultado}
+                    </p>
+                </div>
+            )
+        } else {
+            return (
+                <div className={""} style={{alignItems: "center"}}>
+                    <p className={"col-auto mx-1 my-0 text-sm-center"}
+                       style={{color: "#DE8155", fontSize: "15px"}}>
+                        {resultado}
+                    </p>
+                </div>
+            )
+        }
+
+    }
+
     const viewTable = () => {
         setEnableProcess(!enableProcess)
     }
@@ -130,8 +167,10 @@ export const ProcessBinary = ({ip, title}) => {
             for (let i = 0; i < 8; i++) {
                 tables.push(
                     <td className={"fw-bold"}>
-                        <div style={{"textAlign": "center",
-                            "color": "#3586FF"}}>{valores[i]}</div>
+                        <div style={{
+                            "textAlign": "center",
+                            "color": "#3586FF"
+                        }}>{valores[i]}</div>
                     </td>
                 )
             }

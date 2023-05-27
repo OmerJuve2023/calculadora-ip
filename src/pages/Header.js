@@ -1,36 +1,21 @@
+import "../styles/styles.css"
+
 export function Header() {
     return (
-        <header>
-            <nav className="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-                <div className="container"><a className="navbar-brand" href="#">T'Omer</a>
-                    <button data-bs-toggle="collapse" className="navbar-toggler navbar-toggler-right"
-                            data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive"
-                            aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
-                        className="fa fa-bars"></i></button>
-                    <div className="collapse navbar-collapse" id="navbarResponsive">
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item nav-link"><a className="nav-link active" href="#about">About</a>
-                            </li>
-                            <li className="nav-item nav-link"></li>
-                            <li className="nav-item nav-link"><a className="nav-link" href="#contact">contact</a></li>
-                        </ul>
-                    </div>
+        <header className="masthead text-center text-white">
+            <div className="masthead-content">
+                <div className="container px-5"
+                     style={{alignItems: "center"}}>
+                    <h1 className="masthead-heading mb-0 my-1">Calculator Ip</h1>
+                    <h2 className="masthead-subheading mb-0">Convierte direcciones IP y máscaras de red</h2>
+                    <a className="btn btn-primary btn-xl rounded-pill mt-5"
+                       href="#principal">Comenzar</a>
                 </div>
-            </nav>
-            <header className="masthead">
-                <div className="intro-body">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8 mx-auto">
-                                <h1 className="brand-heading">Calculadora ip</h1>
-                                <p className="intro-text">A free, responsive, one page Bootstrap theme.</p><a
-                                className="btn btn-link btn-circle" role="button" href="#about"><i
-                                className="fa fa-angle-double-down animated"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            </div>
+            <div className="bg-circle-1 bg-circle"></div>
+            <div className="bg-circle-2 bg-circle"></div>
+            <div className="bg-circle-3 bg-circle"></div>
+            <div className="bg-circle-4 bg-circle"></div>
         </header>
     )
 }

@@ -48,7 +48,7 @@ export function PPrincipal() {
     }
 
     return (
-        <div>
+        <div id={"principal"}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-sm mx-1 my-1">

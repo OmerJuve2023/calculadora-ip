@@ -52,44 +52,6 @@ export function PPrincipal() {
         <div id={"principal"} className={"masthead text-center"}>
             <div className="py-5 mx-4 conta-color">
                 <div className="row align-items-center">
-
-                    {/*    <div className="col-sm mx-1 my-1">
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={ip}
-                            placeholder="Ingrese la IP"
-                            disabled={enable}
-                            onChange={handleInputIPChange}
-                            required
-                        />
-                    </div>
-                    <div className="col-sm mx-1 my-1">
-                        <input
-                            type="text"
-                            value={maskNetwork}
-                            className="form-control"
-                            placeholder="Ingrese la Máscara de Red"
-                            onChange={handleInputMaskChange}
-                            disabled={enable}
-                            required
-                        />
-                    </div>
-                    <div className="col-sm mx-1 my-1">
-                        <select
-                            disabled={enable}
-                            value={format}
-                            className="form-select"
-                            onChange={handleFormatChange}
-                            required
-                        >
-                            <option value="" disabled selected>
-                                Ingrese Mascara de Red
-                            </option>
-                            <option value="bits">Bits</option>
-                            <option value="decimal">Decimal</option>
-                        </select>
-                    </div>*/}
                     <div className="masthead-content">
                         <div className="container px-5"
                              style={{alignItems: "center"}}>

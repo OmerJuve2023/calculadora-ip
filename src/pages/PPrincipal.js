@@ -4,6 +4,7 @@ import {ProcessBinary} from "../container/processBinary";
 import {TableRed} from "../container/TableRed";
 import {TableData} from "../container/tableData/TableData";
 import {Footer} from "./Footer";
+import "../styles/styles.css"
 
 export function PPrincipal() {
     const [ip, setIP] = useState("");
@@ -48,10 +49,11 @@ export function PPrincipal() {
     }
 
     return (
-        <div id={"principal"}>
-            <div className="container">
+        <div id={"principal"} className={"masthead text-center"}>
+            <div className="py-5 mx-4 conta-color">
                 <div className="row align-items-center">
-                    <div className="col-sm mx-1 my-1">
+
+                    {/*    <div className="col-sm mx-1 my-1">
                         <input
                             type="text"
                             className="form-control"
@@ -87,8 +89,55 @@ export function PPrincipal() {
                             <option value="bits">Bits</option>
                             <option value="decimal">Decimal</option>
                         </select>
+                    </div>*/}
+                    <div className="masthead-content">
+                        <div className="container px-5"
+                             style={{alignItems: "center"}}>
+                            <input
+                                type="text"
+                                className="form-control"
+                                value={ip}
+                                placeholder="Ingrese la IP"
+                                disabled={enable}
+                                onChange={handleInputIPChange}
+                                required
+                            />
+                            <input
+                                type="text"
+                                value={maskNetwork}
+                                className="form-control my-4"
+                                placeholder="Ingrese la Máscara de Red"
+                                onChange={handleInputMaskChange}
+                                disabled={enable}
+                                required
+                            />
+                            <select
+                                disabled={enable}
+                                value={format}
+                                className="form-select"
+                                onChange={handleFormatChange}
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Ingrese Mascara de Red
+                                </option>
+                                <option value="bits">Bits</option>
+                                <option value="decimal">Decimal</option>
+                            </select>
+                            <button className="btn btn-xl rounded-pill mt-5"
+                                    onClick={convertToBinary}
+                                    disabled={enable}
+                                    style={{backgroundColor: "#3586ff", color: "#fff"}}
+                            >resolver
+                            </button>
+                        </div>
                     </div>
-                    <div className="col-sm-auto mx-1 my-1">
+                    <div className="bg-circle-1 bg-circle"></div>
+                    <div className="bg-circle-2 bg-circle"></div>
+                    <div className="bg-circle-3 bg-circle"></div>
+                    <div className="bg-circle-4 bg-circle"></div>
+
+                    {/*  <div className="col-sm-auto mx-1 my-1">
                         <button
                             onClick={convertToBinary}
                             className="btn"
@@ -106,11 +155,12 @@ export function PPrincipal() {
                         >
                             Limpiar
                         </button>
-                    </div>
+                    </div>*/}
+
                 </div>
 
                 {enable && (
-                    <div className="my-5">
+                    <div className="container my-5">
                         <div>
                             <ProcessBinary ip={ip} title="Proceso IP"/>
                         </div>
@@ -123,7 +173,18 @@ export function PPrincipal() {
                         <div>
                             <TableData/>
                         </div>
-
+                        {/*<button className="btn btn-xl rounded-pill mt-5"
+                                onClick={convertToBinary}
+                                disabled={enable}
+                                style={{backgroundColor: "#3586ff", color: "#fff"}}
+                        >resolver
+                        </button>*/}
+                        <button
+                            className="btn btn-warning btn-xl rounded-pill mt-5"
+                            onClick={clearResults}
+                        >
+                            Limpiar
+                        </button>
                     </div>
                 )}
             </div>

@@ -13,7 +13,7 @@ function App() {
         <div>
             <Navigation/>
             <Header/>
-            <div className={"my-4"}>
+            <div>
                 <PPrincipal/>
             </div>
             {/*<PossibleIPs/>*/}

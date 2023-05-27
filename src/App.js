@@ -12,10 +12,10 @@ function App() {
     return (
         <div>
             <Navigation/>
-            <Header/>
-            <div>
-                <PPrincipal/>
+            <div id={"inicio"}>
+                <Header/>
             </div>
+            <PPrincipal/>
             {/*<PossibleIPs/>*/}
             {/*<Footer/>*/}
         </div>

@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <div className="text-center bg-dark my-0">
+        <div className="text-center bg-dark my-0 py-5">
             <div className="container text-white py-4 py-lg-5">
                 <ul className="list-inline">
                     <li className="list-inline-item"></li>

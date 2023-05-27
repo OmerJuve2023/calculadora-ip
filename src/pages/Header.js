@@ -9,7 +9,7 @@ export function Header() {
                     <h1 className="masthead-heading mb-0 my-1">Calculator Ip</h1>
                     <h2 className="masthead-subheading mb-0">Convierte direcciones IP y máscaras de red</h2>
                     <a className="btn btn-primary btn-xl rounded-pill mt-5"
-                       href="#principal">Comenzar</a>
+                       href={"#principal"}>Comenzar</a>
                 </div>
             </div>
             <div className="bg-circle-1 bg-circle"></div>

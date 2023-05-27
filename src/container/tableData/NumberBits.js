@@ -20,17 +20,10 @@ export const NumberBits = () => {
     }
 
     return (
-        <tr>
-            <th className={"h5"}
-                style={{color: "#b4122f"}}
-            >Longitud de la Red
-            </th>
-            <td className={"h5 fw-bold"}
-                style={{"color": "#3586FF"}}
-            >
-                {calculateNetworkLength(mask)}
-            </td>
-        </tr>
+        <td>
+            {calculateNetworkLength(mask)}
+        </td>
+
     )
 }
 

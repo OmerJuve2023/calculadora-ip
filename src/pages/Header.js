@@ -1,6 +1,11 @@
 import "../styles/styles.css"
 
 export function Header() {
+    function detenerBrillo() {
+        let boton = document.querySelector('.brillar');
+        boton.classList.add('presionado');
+    }
+
     return (
         <header className="masthead text-center text-white">
             <div className="masthead-content">
@@ -8,7 +13,8 @@ export function Header() {
                      style={{alignItems: "center"}}>
                     <h1 className="masthead-heading mb-0 my-1">Calculator Ip</h1>
                     <h2 className="masthead-subheading mb-0">Convierte direcciones IP y máscaras de red</h2>
-                    <a className="btn btn-primary btn-xl rounded-pill mt-5"
+                    <a className="btn btn-primary btn-xl rounded-pill mt-5 brillar"
+                       onClick={detenerBrillo}
                        href={"#principal"}>Comenzar</a>
                 </div>
             </div>

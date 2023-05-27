@@ -15,14 +15,8 @@ export const ClaseIP = () => {
         return rpta
     }
     return (
-        <tr>
-            <th className={"h5"}
-                style={{color: "#b4122f"}}
-            >Tipo de Red
-            </th>
-            <td className={"h5 fw-bold"}
-                style={{"color": "#3586FF"}}
-            >{clase(ip)}</td>
-        </tr>
+        <td>
+            {clase(ip)}
+        </td>
     )
 }

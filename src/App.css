@@ -7,47 +7,35 @@
     padding: 50px 0;
 }
 
-.principal {
-    /*background: linear-gradient(0deg, #ff6a00 0%, #ee0979 90%);*/
+.brillar {
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    border: none;
+    animation: brillo 10s infinite alternate;
 }
 
-.contenedor.bg-circle {
-    z-index: 0;
-    position: absolute;
-    border-radius: 100%;
-    background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+@keyframes brillo {
+    25% {
+        background-color: #eaeaea;
+        color: black;
+    }
+    50% {
+        background-color: #ee0979;
+        color: white;
+    }
+    75% {
+        background-color: #eaeaea;
+        color: black;
+    }
+    100% {
+        background-color: #ee0979;
+        color: white;
+    }
 }
 
-.contenedor.bg-circle-1 {
-    height: 90rem;
-    width: 90rem;
-    bottom: -55rem;
-    left: -55rem;
-}
-
-.principal.bg-circle-2 {
-    height: 50rem;
-    width: 50rem;
-    top: -25rem;
-    right: -25rem;
-}
-
-.principal.bg-circle-3 {
-    height: 20rem;
-    width: 20rem;
-    bottom: -10rem;
-    right: 5%;
-}
-
-.principal.bg-circle-4 {
-    height: 30rem;
-    width: 30rem;
-    top: -5rem;
-    right: 35%;
-}
-
-.espaciado {
-    background-color: #24262b;
+.presionado {
+    animation: none;
+    background-color: #eaeaea;
 }
 
 @media only screen and(max-width: 768px) {

@@ -8,16 +8,8 @@ export const CantSubredes = () => {
     }
 
     return (
-        <tr>
-            <th className={"h5"}
-                style={{color: "#b4122f"}}
-            >Cantidad max. direcciones Subredes
-            </th>
-            <td className={"h5 fw-bold"}
-                style={{"color": "#3586FF"}}
-            >
-                {process(cantSubredes)}
-            </td>
-        </tr>
+        <td>
+            {process(cantSubredes)}
+        </td>
     )
 }

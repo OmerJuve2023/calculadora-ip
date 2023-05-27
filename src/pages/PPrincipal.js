@@ -62,6 +62,7 @@ export function PPrincipal() {
                                 disabled={enable}
                                 onChange={handleInputIPChange}
                                 required
+                                style={{color: "#ee0979"}}
                             />
                             <select
                                 disabled={enable}
@@ -69,6 +70,7 @@ export function PPrincipal() {
                                 className="form-select my-4 form-select-lg"
                                 onChange={handleFormatChange}
                                 required
+                                style={{color: "#ee0979"}}
                             >
                                 <option value="" disabled selected>
                                     tipo máscara de Red
@@ -83,6 +85,7 @@ export function PPrincipal() {
                                 placeholder="ingrese máscara"
                                 onChange={handleInputMaskChange}
                                 disabled={enable}
+                                style={{color: "#ee0979"}}
                                 required
                             />
                             <button className="btn btn-xl rounded-pill mt-5"
@@ -95,24 +98,22 @@ export function PPrincipal() {
                     </div>
                 </div>
                 {enable && (
-                    <div id={"viewResult"}
-                         className="container my-5">
+                    <div id={"viewResult"}>
+                        <div className={"container my-5"}>
+                            <TableData/>
+                        </div>
                         <div>
                             <ProcessBinary ip={ip} title="Proceso IP"/>
                         </div>
                         <div>
                             <ProcessBinary ip={maskNetwork} title="Proceso Máscara de red"/>
                         </div>
-                        <div>
+                        {/*<div>
                             <TableRed ip={binaryIP} mascara={binaryMaskNetwork}/>
-                        </div>
-                        <div>
-                            <TableData/>
-                        </div>
+                        </div>*/}
                         <button
                             className="btn btn-warning btn-xl rounded-pill mt-5"
-                            onClick={clearResults}
-                        >
+                            onClick={clearResults}>
                             Limpiar
                         </button>
                     </div>

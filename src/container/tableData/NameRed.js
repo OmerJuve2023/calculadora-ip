@@ -14,16 +14,8 @@ export const NameRed = () => {
     }
 
     return (
-        <tr>
-            <th className={"h5"}
-                style={{color: "#b4122f"}}
-            >Nombre de Red
-            </th>
-            <td className={"h5 fw-bold"}
-                style={{"color": "#3586FF"}}
-            >
-                {process(nameNetwork)}
-            </td>
-        </tr>
+        <td>
+            {process(nameNetwork)}
+        </td>
     )
 }

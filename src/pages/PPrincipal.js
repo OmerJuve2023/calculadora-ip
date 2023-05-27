@@ -108,9 +108,9 @@ export function PPrincipal() {
                         <div>
                             <ProcessBinary ip={maskNetwork} title="Proceso Máscara de red"/>
                         </div>
-                        {/*<div>
+                        <div>
                             <TableRed ip={binaryIP} mascara={binaryMaskNetwork}/>
-                        </div>*/}
+                        </div>
                         <button
                             className="btn btn-warning btn-xl rounded-pill mt-5"
                             onClick={clearResults}>

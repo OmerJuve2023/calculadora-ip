@@ -25,7 +25,6 @@ export function PPrincipal() {
     const convertToBinary = () => {
         setBinaryIP(Methods.convertToBinary(ip))
         if (format === "bits") {
-            console.log("se ingreso aquí")
             const decimalMask = Methods.convertMaskBitsToDecimal(maskNetwork)
             setMaskNetwork(decimalMask)
             setBinaryMaskNetwork(Methods.convertToBinary(decimalMask))

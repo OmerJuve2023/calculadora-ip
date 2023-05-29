@@ -24,22 +24,19 @@ export const TableData = () => {
                         <table className="table">
                             <tbody>
                             <tr>
-                                <th>Nombre IP</th>
+                                <th>IP</th>
                                 <td>{localStorage.getItem("NUMBER_IP")}</td>
-                                <td>
-                                    <ul className="action-list">
-                                        <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                    </ul>
-                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Máscara de red</th>
+                                <td>{localStorage.getItem("NUMBER_MASK-NETWORK")}</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th>Tipo de Red</th>
                                 <ClaseIP/>
-                                <td>
-                                    <ul className="action-list">
-                                        <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                    </ul>
-                                </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th>Longitud de Red</th>

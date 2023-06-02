@@ -1,23 +1,24 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.min.css"
-import {PPrincipal} from "./pages/PPrincipal";
-import {PossibleIPs} from "./container/PossibleIPs";
-import {Header} from "./pages/Header";
-import {Footer} from "./pages/Footer";
-import IPForm from "./components/IPForm";
 import {Navigation} from "./pages/Navigation";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Home} from "./pages/Home";
+import {TableData} from "./container/tableData/TableData";
+import {PPrincipal} from "./pages/PPrincipal";
 
 function App() {
     return (
         <div>
             <Navigation/>
-            <div id={"inicio"}>
-                <Header/>
-            </div>
-            <PPrincipal/>
-            {/*<PossibleIPs/>*/}
-            {/*<Footer/>*/}
+            <BrowserRouter>
+                <Routes>
+                    <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/result"} element={<TableData/>}/>
+                    <Route path={"/principal"} element={<PPrincipal/>}/>
+                </Routes>
+            </BrowserRouter>
+
         </div>
     );
 }

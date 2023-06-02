@@ -1,12 +1,11 @@
 import React from "react";
+import {PTableData} from "../../components/PTableData";
 
 export const NumberHost = () => {
     const hosts = parseInt(localStorage.getItem("NUMBER_BITS"))
 
     function process(hosts) {
-        const num = 32 - hosts
-        localStorage.setItem("NUMBER_HOSTS", num.toString())
-        return num
+        return PTableData.longitudHosts(hosts)
     }
 
     return (

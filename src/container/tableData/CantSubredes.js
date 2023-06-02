@@ -1,10 +1,10 @@
 import React from "react";
+import {PTableData} from "../../components/PTableData";
 
 export const CantSubredes = () => {
     const cantSubredes = parseInt(localStorage.getItem("NUMBER_BITS"))
-
-    function process(cantSubredes) {
-        return (Math.pow(2, cantSubredes))
+    function process(subRedes) {
+        return PTableData.cantidadSubredes(subRedes)
     }
 
     return (

@@ -29,4 +29,7 @@ function clearLocalStorage() {
     localStorage.removeItem("NUMBER_BITS")
     localStorage.removeItem("NUMBER_IP")
     localStorage.removeItem("NUMBER_MASK-NETWORK")
+    localStorage.removeItem("BTN_FORMAT")
+    localStorage.removeItem("BTN_IP")
+    localStorage.removeItem("BTN_MASK-NETWORK")
 }

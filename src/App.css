@@ -7,35 +7,26 @@
     padding: 50px 0;
 }
 
-.brillar {
-    background-color: #eaeaea;
-    padding: 10px 20px;
+.brillaremos {
+    color: #eaeaea;
+    /*padding: 10px 20px;*/
     border: none;
-    animation: brillo 10s infinite alternate;
+    animation: brillitos 12s infinite alternate;
 }
 
-@keyframes brillo {
+@keyframes brillitos {
     25% {
-        background-color: #eaeaea;
-        color: black;
+        color: #eaeaea;
     }
     50% {
-        background-color: #ee0979;
-        color: white;
+        color: #600532;;
     }
     75% {
-        background-color: #eaeaea;
-        color: black;
+        color: #eaeaea;
     }
     100% {
-        background-color: #ee0979;
-        color: white;
+        color: #600532;
     }
-}
-
-.presionado {
-    animation: none;
-    background-color: #eaeaea;
 }
 
 @media only screen and(max-width: 768px) {

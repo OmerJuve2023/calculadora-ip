@@ -1,18 +1,18 @@
 import React from "react";
 import {PTableData} from "../../components/PTableData";
 
-export const NameRed = () => {
-
-    const ip = localStorage.getItem("NUMBER_IP")
+export const SpaceBits = () => {
     const mask = localStorage.getItem("NUMBER_MASK-NETWORK")
 
-    function process(ip, mask) {
-        return PTableData.nombreRed(ip, mask)
+    const process = (mask) => {
+        return PTableData.longitudRed(mask)
     }
 
     return (
         <td>
-            {process(ip, mask)}
+            {process(mask)}
         </td>
+
     )
 }
+

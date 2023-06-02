@@ -1,15 +1,13 @@
 export function Navigation() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div className="container px-5">
-                <div className="navbar-brand">T'Omer</div>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                        aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
+        <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+            <div className="container"><a className="navbar-brand logo" href="/"><b>T'OMER</b></a>
+                <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+                    className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" className="collapse navbar-collapse">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><a className="nav-link" href="/">Inicio</a></li>
-                        {/*<li className="nav-item"><a className="nav-link" href="#!">Log In</a></li>*/}
+                        <li className="nav-item"><a className="nav-link active" href="/"><b>Inicio</b></a></li>
                     </ul>
                 </div>
             </div>

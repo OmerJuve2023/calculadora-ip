@@ -1,10 +1,16 @@
 import {Header} from "./Header";
-import {PPrincipal} from "./PPrincipal";
+import {SetData} from "./setData";
+import React from "react";
+import {Contenido} from "./Contenido";
+import {Footer} from "./Footer";
 
 export function Home() {
     return (
         <div>
-            <PPrincipal/>
+            <Header/>
+            <Contenido/>
+            <SetData/>
+            <Footer/>
         </div>
     )
 }

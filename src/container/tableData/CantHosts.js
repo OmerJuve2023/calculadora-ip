@@ -9,7 +9,7 @@ export const CantHosts = () => {
     }
 
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(cantHosts)}
         </td>
     )

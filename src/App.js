@@ -5,7 +5,7 @@ import {Navigation} from "./pages/Navigation";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {TableData} from "./container/tableData/TableData";
-import {PPrincipal} from "./pages/PPrincipal";
+import {SetData} from "./pages/setData";
 
 function App() {
     return (
@@ -15,7 +15,7 @@ function App() {
                 <Routes>
                     <Route path={"/"} element={<Home/>}/>
                     <Route path={"/result"} element={<TableData/>}/>
-                    <Route path={"/principal"} element={<PPrincipal/>}/>
+                    <Route path={"/principal"} element={<SetData/>}/>
                 </Routes>
             </BrowserRouter>
 

@@ -11,7 +11,7 @@ export const FormatMaskNetwork = () => {
     }
 
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(format, mask)}
         </td>
     )

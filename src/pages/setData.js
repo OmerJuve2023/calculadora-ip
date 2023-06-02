@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {Header} from "./Header";
 
-export function PPrincipal() {
+export function SetData() {
     const [ip, setIP] = useState("");
     const [maskNetwork, setMaskNetwork] = useState("")
     const [enable, setEnable] = useState(false);
@@ -30,11 +29,10 @@ export function PPrincipal() {
     }
 
     return (
-        <div>
-            <Header/>
+        <div id={"principal"}>
             <div className={"masthead text-center principal"}>
                 <div className="py-5 mx-4 conta-color">
-                    <div id={"principal"} className="row align-items-center">
+                    <div className="row align-items-center">
                         <div className="masthead-content">
                             <div className="container px-5 contendor"
                                  style={{alignItems: "center"}}>
@@ -72,7 +70,7 @@ export function PPrincipal() {
                                 />
                                 <button className="btn btn-xl rounded-pill mt-5"
                                         onClick={execute}
-                                        style={{backgroundColor: "#3586ff", color: "#fff"}}
+                                        style={{backgroundColor: "#7f70f5", color: "#fff"}}
                                 >resolver
                                 </button>
                             </div>

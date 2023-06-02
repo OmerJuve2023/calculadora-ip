@@ -8,7 +8,7 @@ export const ClaseIP = () => {
         return PTableData.clase(object)
     }
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(ip)}
         </td>
     )

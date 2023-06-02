@@ -9,7 +9,7 @@ export const SpaceBits = () => {
     }
 
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(mask)}
         </td>
 

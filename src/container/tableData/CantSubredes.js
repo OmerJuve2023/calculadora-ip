@@ -8,7 +8,7 @@ export const CantSubredes = () => {
     }
 
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(cantSubredes)}
         </td>
     )

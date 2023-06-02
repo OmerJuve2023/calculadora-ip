@@ -11,7 +11,7 @@ export const NameRed = () => {
     }
 
     return (
-        <td>
+        <td className={"alineadoTD"}>
             {process(ip, mask)}
         </td>
     )

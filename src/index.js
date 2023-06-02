@@ -6,8 +6,9 @@ import {createHashRouter, RouterProvider} from "react-router-dom"
 import {Home} from "./pages/Home";
 import {TableData} from "./container/tableData/TableData";
 import {Navigation} from "./pages/Navigation";
-import {PPrincipal} from "./pages/PPrincipal";
+import {SetData} from "./pages/setData";
 import {Header} from "./pages/Header";
+import {ViewResult} from "./pages/ViewResult";
 
 const router = createHashRouter([
     {
@@ -16,10 +17,10 @@ const router = createHashRouter([
     },
     {
         path: "/result",
-        element: <TableData/>
+        element: <ViewResult/>
     }, {
         path: "/principal",
-        element: <PPrincipal/>
+        element: <SetData/>
     },
     {
         path: "/header",

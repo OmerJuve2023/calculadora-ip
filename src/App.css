@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.alineadoTD {
+    text-align: center;
+}
+
 .footer {
     background-color: #24262b;
     padding: 50px 0;
@@ -11,7 +15,7 @@
     color: #eaeaea;
     /*padding: 10px 20px;*/
     border: none;
-    animation: brillitos 12s infinite alternate;
+    animation: brillitos 9s infinite alternate;
 }
 
 @keyframes brillitos {
@@ -29,10 +33,193 @@
     }
 }
 
-@media only screen and(max-width: 768px) {
 
+@media (min-width: 576px) {
+    .navbar {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
 }
 
-@media only screen and(max-width: 768px) {
-
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
 }
+
+
+.portfolio-navbar.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.gradient {
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+}
+
+.icon-container {
+    text-align: center;
+    font-size: 100px;
+    background-color: #0ea0ff;
+    color: #fff;
+    height: auto;
+    width: auto;
+    line-height: 69px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.icon {
+    transform: scale(0.6); /* Ajustar el tamaño del icono (0.8 = 80% del tamaño original) */
+}
+
+.portfolio-block.block-intro p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.portfolio-block.block-intro {
+    text-align: center;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.portfolio-block.block-intro .about-me {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-navbar.fixed-top + .page {
+    padding-top: 62px;
+}
+
+@media (min-width: 576px) {
+    .portfolio-navbar.fixed-top + .page {
+        padding-top: 5.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-block .heading {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-block .heading h2, .portfolio-block .heading .h2 {
+        font-size: 2rem;
+    }
+}
+
+.portfolio-block.skills {
+    border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+    .portfolio-block {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 576px) {
+    .portfolio-navbar.fixed-top + .page {
+        padding-top: 5.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+
+.special-skill-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.portfolio-block .heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gradient {
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    color: #fff;
+}
+
+.page-footer {
+    padding-top: 35px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.gradient.page-footer {
+    border-top: none;
+}
+
+.page-footer .links {
+    display: inline-block;
+}
+
+.page-footer .social-icons {
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

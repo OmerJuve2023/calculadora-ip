@@ -28,16 +28,10 @@ export class TableData extends Component {
                                     <tr>
                                         <th>IP</th>
                                         <td className={"alineadoTD"}>{localStorage.getItem("NUMBER_IP")}</td>
-                                       {/* <td></td>*/}
                                     </tr>
                                     <tr>
                                         <th>Máscara de red</th>
                                         <FormatMaskNetwork/>
-                                       {/* <td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     <tr>
                                         <th>Tipo de Red</th>
@@ -47,38 +41,18 @@ export class TableData extends Component {
                                     <tr>
                                         <th>Longitud de Red</th>
                                         <SpaceBits/>
-                                       {/* <td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     <tr>
                                         <th>Número de Hosts</th>
                                         <NumberHost/>
-                                        {/*<td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     <tr>
                                         <th>Cantidad max. direcciones Hosts</th>
                                         <CantHosts/>
-                                        {/*<td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     <tr>
                                         <th>Cantidad max. Subredes</th>
                                         <CantSubredes/>
-                                        {/*<td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     <tr>
                                         <th>Nombre de la Red</th>

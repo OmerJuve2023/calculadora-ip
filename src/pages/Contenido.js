@@ -7,6 +7,7 @@ export function Contenido() {
         <main className="page lanidng-page my-3">
             <section className="portfolio-block block-intro">
                 <div className="container">
+                    <div className="avatar"/>
                     <div className="about-me">
                         <p>
                             <strong> Calculator IP</strong> es una herramienta que, mediante unos valores dados, nos va
@@ -18,7 +19,7 @@ export function Contenido() {
             <section className="portfolio-block skills">
                 <div className="container">
                     <div className="heading">
-                        <h2>Beneficios de usar Calculator IP</h2>
+                        <h2>BENEFICIOS DE USAR CALCULATOR IP</h2>
                     </div>
                     <div className="row">
                         <div className="col-md-4">

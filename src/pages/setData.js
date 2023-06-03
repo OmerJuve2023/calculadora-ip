@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+import "../styles/stylesSetData.css"
 
 export function SetData() {
     const [ip, setIP] = useState("");
@@ -27,57 +28,67 @@ export function SetData() {
         localStorage.setItem("NUMBER_MASK-NETWORK", maskNetwork)
         navigate("/result")
     }
-
     return (
-        <div id={"principal"}>
-            <div className={"masthead text-center principal"}>
-                <div className="py-5 mx-4 conta-color">
-                    <div className="row align-items-center">
-                        <div className="masthead-content">
-                            <div className="container px-5 contendor"
-                                 style={{alignItems: "center"}}>
-                                <input
-                                    type="text"
-                                    className="form-control form-control-lg"
-                                    value={ip}
-                                    placeholder="ingrese IP"
-                                    onChange={handleInputIPChange}
-                                    required
-                                    style={{color: "#ee0979"}}
-                                />
-                                <select
-                                    disabled={enable}
-                                    value={format}
-                                    className="form-select my-4 form-select-lg"
-                                    onChange={handleFormatChange}
-                                    required
-                                    style={{color: "#ee0979"}}
-                                >
-                                    <option disabled value="">
-                                        tipo máscara de Red
-                                    </option>
-                                    <option value="bits">Bits</option>
-                                    <option value="decimal">Decimal</option>
-                                </select>
-                                <input
-                                    type="text"
-                                    value={maskNetwork}
-                                    className="form-control my-4 form-control-lg"
-                                    placeholder="ingrese máscara"
-                                    onChange={handleInputMaskChange}
-                                    style={{color: "#ee0979"}}
-                                    required
-                                />
-                                <button className="btn btn-xl rounded-pill mt-5"
-                                        onClick={execute}
-                                        style={{backgroundColor: "#7f70f5", color: "#fff"}}
-                                >resolver
-                                </button>
-                            </div>
-                        </div>
+        <div id={"principal"} className="page hire-me-page">
+            <section className="portfolio-block hire-me">
+                <div className="container">
+                    <div className="heading">
+                        <h2>Empieza a calcular</h2>
                     </div>
+                    <form>
+                        <div className="mb-3">
+                            <input
+                                type="text"
+                                className="form-control form-control-lg inputFocus"
+                                value={ip}
+                                placeholder="ingrese IP"
+                                onChange={handleInputIPChange}
+                                style={{color: "#0ea0ff"}}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <select
+                                disabled={enable}
+                                value={format}
+                                className="form-select form-select-lg"
+                                onChange={handleFormatChange}
+                                style={{color: "#0ea0ff"}}
+                            >
+                                <option disabled value="">
+                                    tipo máscara de Red
+                                </option>
+                                <option value="bits">Bits</option>
+                                <option value="decimal">Decimal</option>
+                            </select>
+                        </div>
+                        <div className="mb-3">
+                            <input
+                                type="text"
+                                value={maskNetwork}
+                                className="form-control form-control-lg inputFocus"
+                                placeholder="ingrese máscara"
+                                onChange={handleInputMaskChange}
+                                style={{color: "#0ea0ff"}}
+                                required
+                            />
+                        </div>
+                        <div className="mb-3"
+                             style={{
+                                 display: "flex",
+                                 justifyContent: "center",
+                                 alignItems: "center"
+                             }}>
+                            <button
+                                className="btn btn-xl rounded-pill"
+                                onClick={execute}
+                                style={{backgroundColor: "#ee0979", color: "#fff"}}
+                            >
+                                resolver
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </div>
+            </section>
         </div>
     )
 }

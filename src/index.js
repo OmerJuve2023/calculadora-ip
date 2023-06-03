@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createHashRouter, RouterProvider} from "react-router-dom"
 import {Home} from "./pages/Home";
-import {TableData} from "./container/tableData/TableData";
 import {Navigation} from "./pages/Navigation";
 import {SetData} from "./pages/setData";
 import {Header} from "./pages/Header";

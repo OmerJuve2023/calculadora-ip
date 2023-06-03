@@ -1,5 +1,4 @@
 import "../styles/styles.css"
-import '../App.css';
 import React, {useRef} from "react";
 
 export const Header = () => {

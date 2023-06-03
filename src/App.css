@@ -135,7 +135,7 @@ p {
 
 @media (min-width: 768px) {
     .portfolio-block .heading h2, .portfolio-block .heading .h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 
@@ -203,23 +203,14 @@ a {
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.portfolio-block.block-intro .avatar {
+    background-image: url("images/imgCalculator.jpg");
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
 

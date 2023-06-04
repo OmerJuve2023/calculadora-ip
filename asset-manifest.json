@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/calculadora-ip/static/css/main.d3c38de4.css",
-    "main.js": "/calculadora-ip/static/js/main.9ef18152.js",
+    "main.js": "/calculadora-ip/static/js/main.569f7662.js",
     "static/js/787.2287992b.chunk.js": "/calculadora-ip/static/js/787.2287992b.chunk.js",
     "static/media/bootstrap-icons.woff?": "/calculadora-ip/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/imgCalculator.jpg": "/calculadora-ip/static/media/imgCalculator.2c16deb2217bfef8d746.jpg",
     "static/media/bootstrap-icons.woff2?": "/calculadora-ip/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "index.html": "/calculadora-ip/index.html",
     "main.d3c38de4.css.map": "/calculadora-ip/static/css/main.d3c38de4.css.map",
-    "main.9ef18152.js.map": "/calculadora-ip/static/js/main.9ef18152.js.map",
+    "main.569f7662.js.map": "/calculadora-ip/static/js/main.569f7662.js.map",
     "787.2287992b.chunk.js.map": "/calculadora-ip/static/js/787.2287992b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3c38de4.css",
-    "static/js/main.9ef18152.js"
+    "static/js/main.569f7662.js"
   ]
 }

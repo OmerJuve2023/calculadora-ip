@@ -36,7 +36,6 @@ export class TableData extends Component {
                                     <tr>
                                         <th>Tipo de Red</th>
                                         <ClaseIP/>
-                                        {/*<td></td>*/}
                                     </tr>
                                     <tr>
                                         <th>Longitud de Red</th>
@@ -57,11 +56,6 @@ export class TableData extends Component {
                                     <tr>
                                         <th>Nombre de la Red</th>
                                         <NameRed/>
-                                        {/*<td>
-                                            <ul className="action-list">
-                                                <li><a href="#" data-tip="edit"><i className="fa fa-edit"></i></a></li>
-                                            </ul>
-                                        </td>*/}
                                     </tr>
                                     </tbody>
                                 </table>

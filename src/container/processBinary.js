@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import React, {useState} from "react";
+import "../styles/tableStyles.css"
 
-export const ProcessBinary = ({ip, title}) => {
+export const ProcessBinary = ({nombre, title}) => {
     ProcessBinary.prototype = {
         ip: PropTypes.func.isRequired,
         title: PropTypes.func.isRequired
     }
-    const [p1, p2, p3, p4] = ip.split(".")
+    const [p1, p2, p3, p4] = nombre.split(".")
     const [enableProcess, setEnableProcess] = useState(false)
     let contador = 0
 
@@ -25,7 +26,7 @@ export const ProcessBinary = ({ip, title}) => {
                     resultado = contador
                 }
                 tables.push(
-                    <td className={"text-nowrap"}
+                    <td className={"text-nowrap border"}
                         style={{textAlign: "center", alignItems: "center"}}>
                         {Resta(value, contador, octeto, resultado)}
                     </td>
@@ -41,15 +42,21 @@ export const ProcessBinary = ({ip, title}) => {
             for (let i = 7; i >= 0; i--) {
                 let octeto = Math.pow(2, i)
                 tables.push(
-                    <td className="text-nowrap">
+                    <td className="text-nowrap border">
                         <div className="row row-cols-sm-3"
                              style={{textAlign: "center", alignItems: "center"}}
                              key={i}>
                             <div className="col-auto "
-                                 style={{fontSize: "14px"}}>{contador}</div>
+                                 style={{fontSize: "14px"}}
+                            >
+                                {contador}
+                            </div>
                             <div className="col-auto "
-                                 style={{color: "#DE556E", fontSize: "14px"}}>
-                                &gt;=
+                                 style={{color: "#3586FF", fontSize: "14px"}}
+                            >
+                                <b>
+                                    >=
+                                </b>
                             </div>
                             <div className="col-auto "
                                  style={{fontSize: "14px"}}>
@@ -65,46 +72,57 @@ export const ProcessBinary = ({ip, title}) => {
     const processAll = (object) => {
         return (
             enableProcess && (
-                <div>
-                    <table className="table table-bordered rounded-5">
-                        <tbody>
-                        <tr>
-                            <th style={{color: "#DE55B2"}}
-                                colSpan={8}>Preguntar la Condición
-                            </th>
-                        </tr>
-                        <tr style={{"textAlign": "center", color: "#b4122f"}}>
-                            <th>128</th>
-                            <th>64</th>
-                            <th>32</th>
-                            <th>16</th>
-                            <th>8</th>
-                            <th>4</th>
-                            <th>2</th>
-                            <th>1</th>
-                        </tr>
-                        <tr style={{textAlign: "center"}}>
-                            {process01(object)}
-                        </tr>
-                        <tr>
-                            <th
-                                style={{color: "#DE55B2"}}
-                                colSpan={8}>Restar
-                            </th>
-                        </tr>
-                        <tr>
-                            {process02(object)}
-                        </tr>
-                        <tr
-                            style={{color: "#DE55B2"}}>
-                            <th colSpan={8}>Resultado</th>
-                        </tr>
-                        <tr>
-                            {binary(object)}
-                        </tr>
-                        </tbody>
-                    </table>
-                    <br/>
+                <div className={"my-2"}>
+                    <div className="panel-heading">
+                        <div className="row">
+                            <div className="col"
+                                 style={{textAlign: "center"}}
+                            >
+                                <b className={"h3 title"}>
+                                    {object}
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={"panel-body table-responsive"}>
+                        <table className="table">
+                            <tbody>
+                            <tr
+                                className={"border"}
+                                style={{
+                                    "textAlign": "center",
+                                    color: "#b4122f",
+                                }}>
+                                <th>128</th>
+                                <th>64</th>
+                                <th>32</th>
+                                <th>16</th>
+                                <th>8</th>
+                                <th>4</th>
+                                <th>2</th>
+                                <th>1</th>
+                            </tr>
+                            <tr style={{textAlign: "center"}}>
+                                {process01(object)}
+                            </tr>
+                            <tr>
+                                {process02(object)}
+                            </tr>
+                            <tr
+                                style={{
+                                    color: "white",
+                                }}>
+                                <th colSpan={8}
+                                    className={"h5 table-results"}
+                                >Resultado
+                                </th>
+                            </tr>
+                            <tr>
+                                {binary(object)}
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             )
         )
@@ -115,24 +133,28 @@ export const ProcessBinary = ({ip, title}) => {
             return (
                 <div className={"row row-cols-sm-5"}>
                     <div className={"col-auto"}
-                       style={{fontSize: "14px"}}>
+                         style={{fontSize: "14px"}}>
                         {contador}
                     </div>
                     <div className={"col-auto"}
-                       style={{color: "#DE556E", fontSize: "14px"}}>
-                        ─
+                         style={{color: "#3586FF", fontSize: "14px"}}>
+                        <b>
+                            ─
+                        </b>
                     </div>
                     <div className={"col-auto"}
-                       style={{fontSize: "14px"}}>
+                         style={{fontSize: "14px"}}>
                         {octeto}
                     </div>
                     <div className={"col-auto"}
-                       style={{color: "#DE556E", fontSize: "14px"}}>
-                        =
+                         style={{color: "#3586FF", fontSize: "14px"}}>
+                        <b>
+                            =
+                        </b>
                     </div>
                     <div className={"col-auto"}
-                       style={{color: "#DE8155", fontSize: "15px"}}>
-                        {resultado}
+                         style={{color: "#7f70f5", fontSize: "15px"}}>
+                        <b>{resultado}</b>
                     </div>
                 </div>
             )
@@ -140,8 +162,10 @@ export const ProcessBinary = ({ip, title}) => {
             return (
                 <div className={""} style={{alignItems: "center"}}>
                     <p className={"col-auto mx-1 my-0 text-sm-center"}
-                       style={{color: "#DE8155", fontSize: "15px"}}>
-                        {resultado}
+                       style={{color: "#7f70f5", fontSize: "15px"}}>
+                        <b>
+                            {resultado}
+                        </b>
                     </p>
                 </div>
             )
@@ -167,11 +191,15 @@ export const ProcessBinary = ({ip, title}) => {
         if (enableProcess)
             for (let i = 0; i < 8; i++) {
                 tables.push(
-                    <td className={"fw-bold"}>
+                    <td className={"fw-bold border"}>
                         <div style={{
                             "textAlign": "center",
                             "color": "#3586FF"
-                        }}>{valores[i]}</div>
+                        }}>
+                            <b>
+                                {valores[i]}
+                            </b>
+                        </div>
                     </td>
                 )
             }
@@ -186,18 +214,25 @@ export const ProcessBinary = ({ip, title}) => {
     }
 
     return (
-        <div className={"row"} style={{textAlign: "left"}}>
-            <div className={"my-3 col d-flex justify-content-start"}>
-                <h3 className={"align-items-center"}
-                    style={{color: "#DE55B2"}}
-                >{title}</h3>
-            </div>
-            <div className={"col-auto d-flex justify-content-center"}>
-                < button
-                    style={{"backgroundColor": "#4935FF", "color": "#fff"}}
-                    className={"my-3 btn"}
-                    onClick={viewTable}>{enableProcess ? "Ocultar" : "Mostrar"}
-                </button>
+        <div className={"container"}>
+            <div className="row align-items-center">
+                <div className="col-auto">
+                    <h2 className="text-start"
+                        style={{color: "#3586FF"}}>
+                        {title}
+                    </h2>
+                </div>
+                <div className="col d-flex justify-content-end btn-lg">
+                    <button
+                        type="button"
+                        className="my-3 btn processBinary-button"
+                        onClick={viewTable}
+                    >
+                        <b>
+                            {enableProcess ? "Ocultar" : "Mostrar"}
+                        </b>
+                    </button>
+                </div>
             </div>
             {processAll(p1)}
             {processAll(p2)}

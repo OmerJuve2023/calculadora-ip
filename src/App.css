@@ -214,3 +214,13 @@ a {
     margin-bottom: 30px;
 }
 
+.processBinary-button {
+    background: linear-gradient(0deg, #7f70f5, #0ea0ff);
+    /*background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);*/
+    color: #fff;
+    width: 150px;
+}
+
+.table-results {
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+}

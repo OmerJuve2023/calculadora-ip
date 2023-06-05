@@ -1,13 +1,14 @@
 import {TableData} from "../container/tableData/TableData";
 import {Footer} from "./Footer";
 import {DeleteResults} from "../container/deleteResults";
-import {ProcessBinary} from "../container/processBinary";
+import {ChangeToBinary} from "../container/ChangeToBinary";
 
 export function ViewResult() {
     return (
         <div>
             <TableData/>
-            <ProcessBinary title={"Conversion IP"} nombre={localStorage.getItem("NUMBER_IP")}/>
+            <ChangeToBinary title={"Conversión IP"} nombre={localStorage.getItem("NUMBER_IP")}/>
+            <ChangeToBinary title={"Conversión Mscara de Red"} nombre={localStorage.getItem("NUMBER_MASK-NETWORK")}/>
             <DeleteResults/>
             <Footer/>
         </div>

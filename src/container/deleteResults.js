@@ -10,7 +10,7 @@ export const DeleteResults = () => {
     }
 
     return (
-        <div className={"container-fluid"}
+        <div className={"container-fluid my-3"}
              style={{
                  display: "flex",
                  justifyContent: "center",

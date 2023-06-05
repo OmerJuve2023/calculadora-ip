@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React, {useState} from "react";
 import "../styles/tableStyles.css"
 
-export const ProcessBinary = ({nombre, title}) => {
-    ProcessBinary.prototype = {
+export const ChangeToBinary = ({nombre, title}) => {
+    ChangeToBinary.prototype = {
         ip: PropTypes.func.isRequired,
         title: PropTypes.func.isRequired
     }

@@ -1,4 +1,4 @@
-import "../App.css"
+import "../../App.css"
 import "bootstrap-icons/font/bootstrap-icons.min.css"
 import {BsStar, BsLightbulb, BsGear} from 'react-icons/bs'
 

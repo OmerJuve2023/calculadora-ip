@@ -1,5 +1,5 @@
 import React from "react";
-import {PTableData} from "../components/PTableData";
+import {PTableData} from "../../components/PTableData";
 
 export const ClaseIP = () => {
 

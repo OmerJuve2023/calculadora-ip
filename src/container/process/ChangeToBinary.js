@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React, {useState} from "react";
-import "../styles/tableStyles.css"
+import "../../styles/tableStyles.css"
 
 export const ChangeToBinary = ({nombre, title}) => {
     ChangeToBinary.prototype = {
@@ -108,16 +108,8 @@ export const ChangeToBinary = ({nombre, title}) => {
                             <tr>
                                 {process02(object)}
                             </tr>
-                            <tr
-                                style={{
-                                    color: "white",
-                                }}>
-                                <th colSpan={8}
-                                    className={"h5 table-results"}
-                                >Resultado
-                                </th>
-                            </tr>
-                            <tr>
+                            <tr className={"table-results"}
+                            >
                                 {binary(object)}
                             </tr>
                             </tbody>
@@ -194,7 +186,7 @@ export const ChangeToBinary = ({nombre, title}) => {
                     <td className={"fw-bold border"}>
                         <div style={{
                             "textAlign": "center",
-                            "color": "#3586FF"
+                            "color": "white"
                         }}>
                             <b>
                                 {valores[i]}

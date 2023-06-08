@@ -3,7 +3,7 @@ import {SpaceBits} from "./SpaceBits";
 import {NumberHost} from "./NumberHost";
 import {CantHosts} from "./CantHosts";
 import {CantSubredes} from "./CantSubredes";
-import {ClaseIP} from "../ClaseIP";
+import {ClaseIP} from "./ClaseIP";
 import {NameRed} from "./NameRed";
 import {FormatMaskNetwork} from "./FormatMaskNetwork"
 import "../../styles/tableStyles.css";
@@ -11,7 +11,9 @@ import "../../styles/tableStyles.css";
 export class TableData extends Component {
     render() {
         return (
-            <div className={"container-fluid"}>
+            <div
+            id={"tableData"}
+                className={"container-fluid"}>
                 <div className="row justify-content-center my-5">
                     <div className="col-md-offset-1 col-md-6 my-5">
                         <div className="panel">

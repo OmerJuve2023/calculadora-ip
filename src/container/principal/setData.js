@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import "../styles/stylesSetData.css"
+import "../../styles/stylesSetData.css"
 
 export function SetData() {
     const [ip, setIP] = useState("");

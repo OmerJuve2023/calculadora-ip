@@ -50,7 +50,7 @@ export function TypeRed() {
                     </div>
                 </div>
             )
-        );
+        )
     }
 
     return (

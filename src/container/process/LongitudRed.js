@@ -6,7 +6,6 @@ export function LongitudRed() {
         setEnableProcess(!enableProcess)
     }
 
-
     function validate(mascara) {
 
         const componentes = mascara.split('.');
@@ -47,7 +46,6 @@ export function LongitudRed() {
         )
     }
 
-
     return (
         <div className={"container"}>
             <div className={"row align-items-center"}>
@@ -56,7 +54,7 @@ export function LongitudRed() {
                         className={"text-start"}
                         style={{color: "#3586FF"}}
                     >
-                        Longitud de la Red
+                        Long. de la Red
                     </h2>
                 </div>
                 <div className={"col d-flex justify-content-end btn-lg"}>

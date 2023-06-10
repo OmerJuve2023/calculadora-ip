@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import "../../styles/stylesTypeRed.css"
+
 export function TypeRed() {
     const [enableProcess, setEnableProcess] = useState(false);
     const [clase, setClase] = useState(localStorage.getItem("CLASS_IP") || "")
@@ -19,7 +20,7 @@ export function TypeRed() {
         {letra: 'C', valor: 3, description: 'De 192 a 223'},
         {letra: 'D', valor: 4, description: 'De 224 a 239'},
         {letra: 'E', valor: 5, description: 'De 240 a 255'}
-    ];
+    ]
 
     function validate(clase) {
         return (
@@ -29,15 +30,17 @@ export function TypeRed() {
                         <div className={"panel"}>
                             <div className={"panel-body table-responsive"}>
                                 <table className="table">
-                                    <tbody>
+                                    <tbody
+                                        style={{textAlign: "center"}}
+                                    >
                                     {tipos.map((item, index) => (
                                         <tr
                                             key={index}
                                             className={item.letra === clase ? "resaltar-clase" : ""}
                                         >
-                                            <th>
+                                            <td>
                                                 Clase {item.letra}
-                                            </th>
+                                            </td>
                                             <td>
                                                 {item.description}
                                             </td>
@@ -78,5 +81,5 @@ export function TypeRed() {
             </div>
             {validate(clase)}
         </div>
-    );
+    )
 }

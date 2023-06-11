@@ -12,7 +12,7 @@ export class TableData extends Component {
     render() {
         return (
             <div
-            id={"tableData"}
+                id={"tableData"}
                 className={"container-fluid"}>
                 <div className="row justify-content-center my-5">
                     <div className="col-md-offset-1 col-md-6 my-5">
@@ -26,7 +26,9 @@ export class TableData extends Component {
                             </div>
                             <div className="panel-body table-responsive">
                                 <table className="table">
-                                    <tbody>
+                                    <tbody
+                                        className={"sizeTd"}
+                                    >
                                     <tr>
                                         <th>IP</th>
                                         <td className={"alineadoTD"}>{localStorage.getItem("NUMBER_IP")}</td>

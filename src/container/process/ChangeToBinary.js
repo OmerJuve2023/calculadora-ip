@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React, {useState} from "react";
-import "../../styles/tableStyles.css"
 
 export const ChangeToBinary = ({nombre, title}) => {
     ChangeToBinary.prototype = {
@@ -27,7 +26,10 @@ export const ChangeToBinary = ({nombre, title}) => {
                 }
                 tables.push(
                     <td className={"text-nowrap border"}
-                        style={{textAlign: "center", alignItems: "center"}}>
+                        style={{
+                            textAlign: "center",
+                            alignItems: "center"
+                        }}>
                         {Resta(value, contador, octeto, resultado)}
                     </td>
                 )
@@ -43,26 +45,32 @@ export const ChangeToBinary = ({nombre, title}) => {
                 let octeto = Math.pow(2, i)
                 tables.push(
                     <td className="text-nowrap border">
-                        <div className="row row-cols-sm-3"
-                             style={{textAlign: "center", alignItems: "center"}}
-                             key={i}>
-                            <div className="col-auto "
-                                 style={{fontSize: "14px"}}
-                            >
-                                {contador}
-                            </div>
-                            <div className="col-auto "
-                                 style={{color: "#3586FF", fontSize: "14px"}}
-                            >
-                                <b>
-                                    >=
-                                </b>
-                            </div>
-                            <div className="col-auto "
-                                 style={{fontSize: "14px"}}>
-                                {octeto}
-                            </div>
-                        </div>
+                        <table>
+                            <tbody>
+                            <tr key={i}>
+                                {/* <div className="row row-cols-sm-3"
+                                     style={{textAlign: "center", alignItems: "center"}}
+                                     key={i}>*/}
+                                <td
+                                >
+                                    {contador}
+                                </td>
+                                <td
+                                    style={{color: "#5c1f65"}}
+                                >
+                                    <b>
+                                        >=
+                                    </b>
+                                </td>
+                                <td
+                                    style={{}}>
+                                    {octeto}
+                                </td>
+                                {/*</div>*/}
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </td>
                 )
                 convertBinary(object, octeto)
@@ -72,48 +80,55 @@ export const ChangeToBinary = ({nombre, title}) => {
     const processAll = (object) => {
         return (
             enableProcess && (
-                <div className={"my-2"}>
-                    <div className="panel-heading">
-                        <div className="row">
-                            <div className="col"
-                                 style={{textAlign: "center"}}
-                            >
-                                <b className={"h3 title"}>
-                                    {object}
-                                </b>
+                <div className={"container-fluid"}>
+                    <div className={"my-2 row justify-content-center"}>
+                        <div className="panel-heading">
+                            <div className="row">
+                                <div className="col"
+                                     style={{textAlign: "center"}}
+                                >
+                                    <b className={"h3 title"}>
+                                        {object}
+                                    </b>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={"panel-body table-responsive"}>
-                        <table className="table">
-                            <tbody>
-                            <tr
-                                className={"border"}
-                                style={{
-                                    "textAlign": "center",
-                                    color: "#b4122f",
-                                }}>
-                                <th>128</th>
-                                <th>64</th>
-                                <th>32</th>
-                                <th>16</th>
-                                <th>8</th>
-                                <th>4</th>
-                                <th>2</th>
-                                <th>1</th>
-                            </tr>
-                            <tr style={{textAlign: "center"}}>
-                                {process01(object)}
-                            </tr>
-                            <tr>
-                                {process02(object)}
-                            </tr>
-                            <tr className={"table-results"}
-                            >
-                                {binary(object)}
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div className={"panel"}>
+                            <div className={"panel-body table-responsive"}>
+                                <table className="table">
+                                    <tbody>
+                                    <tr
+                                        className={"border"}
+                                        style={{
+                                            "textAlign": "center"
+                                        }}>
+                                        <th><b>128</b></th>
+                                        <th><b>64</b></th>
+                                        <th><b>32</b></th>
+                                        <th><b>16</b></th>
+                                        <th><b>8</b></th>
+                                        <th><b>4</b></th>
+                                        <th><b>2</b></th>
+                                        <th><b>1</b></th>
+                                    </tr>
+                                    <tr
+                                        className={"text-sm-center"}
+                                        style={{textAlign: "center"}}>
+                                        {process01(object)}
+                                    </tr>
+                                    <tr
+                                        className={"text-sm-center"}
+                                    >
+                                        {process02(object)}
+                                    </tr>
+                                    <tr className={"table-results"}
+                                    >
+                                        {binary(object)}
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )
@@ -123,38 +138,38 @@ export const ChangeToBinary = ({nombre, title}) => {
     function Resta(value, contador, octeto, resultado) {
         if (value) {
             return (
-                <div className={"row row-cols-sm-5"}>
-                    <div className={"col-auto"}
-                         style={{fontSize: "14px"}}>
-                        {contador}
-                    </div>
-                    <div className={"col-auto"}
-                         style={{color: "#3586FF", fontSize: "14px"}}>
+                <tr>
+                    <td>
+                        <div>
+                            {contador}
+                        </div>
+                    </td>
+                    <td
+                        style={{color: "#5c1f65"}}>
                         <b>
                             ─
                         </b>
-                    </div>
-                    <div className={"col-auto"}
-                         style={{fontSize: "14px"}}>
+                    </td>
+                    <td>
                         {octeto}
-                    </div>
-                    <div className={"col-auto"}
-                         style={{color: "#3586FF", fontSize: "14px"}}>
+                    </td>
+                    <td
+                        style={{color: "#5c1f65"}}>
                         <b>
                             =
                         </b>
-                    </div>
-                    <div className={"col-auto"}
-                         style={{color: "#7f70f5", fontSize: "15px"}}>
+                    </td>
+                    <td
+                        style={{color: "#5c1f65"}}>
                         <b>{resultado}</b>
-                    </div>
-                </div>
+                    </td>
+                </tr>
             )
         } else {
             return (
-                <div className={""} style={{alignItems: "center"}}>
+                <div style={{alignItems: "center"}}>
                     <p className={"col-auto mx-1 my-0 text-sm-center"}
-                       style={{color: "#7f70f5", fontSize: "15px"}}>
+                       style={{color: "#5c1f65"}}>
                         <b>
                             {resultado}
                         </b>
@@ -183,7 +198,7 @@ export const ChangeToBinary = ({nombre, title}) => {
         if (enableProcess)
             for (let i = 0; i < 8; i++) {
                 tables.push(
-                    <td className={"fw-bold border"}>
+                    <td className={"fw-bold"}>
                         <div style={{
                             "textAlign": "center",
                             "color": "white"

@@ -6,19 +6,16 @@ import {TypeRed} from "../container/process/TypeRed";
 import {LongitudRed} from "../container/process/LongitudRed";
 import {LengthHosts} from "../container/process/LengthHosts";
 import {NombreRed} from "../container/process/NombreRed";
+import {Component} from "react";
+import {ResultClass} from "../container/process/RessultClass";
 
 export function ViewResult() {
     return (
         <div>
             <TableData/>
-            <ChangeToBinary title={"Conv. IP"} nombre={localStorage.getItem("NUMBER_IP")}/>
-            <ChangeToBinary title={"Conv. Mask Red"} nombre={localStorage.getItem("NUMBER_MASK-NETWORK")}/>
-            <TypeRed/>
-            <LongitudRed/>
-            <LengthHosts/>
-            <NombreRed/>
-            <DeleteResults/>
+            <ResultClass/>
             <Footer/>
         </div>
     )
 }
+

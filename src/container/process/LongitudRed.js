@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 
 export function LongitudRed() {
     const [enableProcess, setEnableProcess] = useState(false);
@@ -9,7 +9,6 @@ export function LongitudRed() {
     function validate(mascara) {
 
         const componentes = mascara.split('.');
-
         const componente1 = parseInt(componentes[0]).toString(2).padStart(8, '0');
         const componente2 = parseInt(componentes[1]).toString(2).padStart(8, '0');
         const componente3 = parseInt(componentes[2]).toString(2).padStart(8, '0');
@@ -46,6 +45,34 @@ export function LongitudRed() {
         )
     }
 
+    function description() {
+        return (
+            enableProcess && (
+
+                <div className={"col-auto"}>
+                    <div className={"panel col-md-3"}>
+                        <div className={"panel-body"}>
+                            <table className={"table"}>
+                                <tbody>
+                                <tr>
+                                    <td>IP</td>
+                                    <td
+                                        style={{
+                                            alignItems: "center",
+                                            textAlign: "center"
+                                        }}
+                                    >{localStorage.getItem("NUMBER_MASK-NETWORK")}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            )
+        )
+    }
+
     return (
         <div className={"container"}>
             <div className={"row align-items-center"}>
@@ -69,6 +96,7 @@ export function LongitudRed() {
                     </button>
                 </div>
             </div>
+            {description()}
             {validate(localStorage.getItem("NUMBER_MASK-NETWORK"))}
         </div>
     )

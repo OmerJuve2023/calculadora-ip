@@ -10,8 +10,9 @@ export class ResultClass extends Component {
     render() {
         return (
             <div>
-                <ChangeToBinary title={"Conv. IP"} nombre={localStorage.getItem("NUMBER_IP")}/>
-                <ChangeToBinary title={"Conv. Mask Red"} nombre={localStorage.getItem("NUMBER_MASK-NETWORK")}/>
+                <ChangeToBinary title={"Conv. IP"} nombre={localStorage.getItem("NUMBER_IP")} constante={"IP"}/>
+                <ChangeToBinary title={"Conv. Mask Red"} nombre={localStorage.getItem("NUMBER_MASK-NETWORK")}
+                                constante={"Mask"}/>
                 <TypeRed/>
                 <LongitudRed/>
                 <LengthHosts/>

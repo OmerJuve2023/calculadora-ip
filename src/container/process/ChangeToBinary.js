@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import React, {useState} from "react";
 
-export const ChangeToBinary = ({nombre, title}) => {
+export const ChangeToBinary = ({nombre, title, constante}) => {
     ChangeToBinary.prototype = {
         ip: PropTypes.func.isRequired,
-        title: PropTypes.func.isRequired
+        title: PropTypes.func.isRequired,
+        constante: PropTypes.func.isRequired
     }
     const [p1, p2, p3, p4] = nombre.split(".")
     const [enableProcess, setEnableProcess] = useState(false)
@@ -47,10 +48,10 @@ export const ChangeToBinary = ({nombre, title}) => {
                     <td className="text-nowrap border">
                         <table>
                             <tbody>
-                            <tr key={i}>
-                                {/* <div className="row row-cols-sm-3"
-                                     style={{textAlign: "center", alignItems: "center"}}
-                                     key={i}>*/}
+                            <tr key={i}
+                                className={"text-sm-center"}
+                                style={{textAlign: "center", alignItems: "center"}}
+                            >
                                 <td
                                 >
                                     {contador}
@@ -66,7 +67,6 @@ export const ChangeToBinary = ({nombre, title}) => {
                                     style={{}}>
                                     {octeto}
                                 </td>
-                                {/*</div>*/}
                             </tr>
                             </tbody>
                         </table>
@@ -220,6 +220,33 @@ export const ChangeToBinary = ({nombre, title}) => {
         } else return 0
     }
 
+    function description() {
+        return (
+            enableProcess && (
+                <div className={"col-auto"}>
+                    <div className={"panel col-md-3"}>
+                        <div className={"panel-body"}>
+                            <table className={"table"}>
+                                <tbody>
+                                <tr>
+                                    <td>{constante}</td>
+                                    <td
+                                        style={{
+                                            alignItems: "center",
+                                            textAlign: "center"
+                                        }}
+                                    >{nombre}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            )
+        )
+    }
+
+
     return (
         <div className={"container"}>
             <div className="row align-items-center">
@@ -241,6 +268,7 @@ export const ChangeToBinary = ({nombre, title}) => {
                     </button>
                 </div>
             </div>
+            {description()}
             {processAll(p1)}
             {processAll(p2)}
             {processAll(p3)}

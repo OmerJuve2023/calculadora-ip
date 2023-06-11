@@ -28,10 +28,9 @@ export function LengthHosts() {
     function form1() {
         return enableProcess && (
             <div
-                className={"h2"}
+                className={"h4 text-lowercase"}
                 style={{
-                    textAlign: "center",
-                    color: "#7f70f5"
+                    textAlign: "center"
                 }}
                 ref={formRef1}/>
         )
@@ -40,10 +39,9 @@ export function LengthHosts() {
     function form2() {
         return enableProcess && (
             <div
-                className={"h2"}
+                className={"h4 text-lowercase"}
                 style={{
-                    textAlign: "center",
-                    color: "#7f70f5"
+                    textAlign: "center"
                 }}
                 ref={formRef2}/>
         )
@@ -52,10 +50,9 @@ export function LengthHosts() {
     function form3() {
         return enableProcess && (
             <div
-                className={"h2"}
+                className={"h4 text-lowercase"}
                 style={{
-                    textAlign: "center",
-                    color: "#7f70f5"
+                    textAlign: "center"
                 }}
                 ref={formRef3}/>
         )
@@ -79,9 +76,38 @@ export function LengthHosts() {
                     </button>
                 </div>
             </div>
-            {form1()}
-            {form2()}
-            {form3()}
+            {
+                enableProcess && (
+                    <div className={"row justify-content-center"}>
+                        <div className={"col-md-4 panel"}>
+                            <div className={"panel-body"}>
+                                <div>
+                                    <table className={"table"}>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                {form1()}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {form2()}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {form3()}
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     )
 }

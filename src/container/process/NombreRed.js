@@ -72,6 +72,43 @@ export function NombreRed() {
         )
     }
 
+    function description() {
+        return (
+            enableProcess && (
+
+                <div className={"col-auto"}>
+                    <div className={"panel col-md-3"}>
+                        <div className={"panel-body"}>
+                            <table className={"table"}>
+                                <tbody>
+                                <tr>
+                                    <td>IP</td>
+                                    <td
+                                        style={{
+                                            alignItems: "center",
+                                            textAlign: "center"
+                                        }}
+                                    >{localStorage.getItem("NUMBER_IP")}</td>
+                                </tr>
+                                <tr>
+                                    <td>MASK</td>
+                                    <td
+                                        style={{
+                                            alignItems: "center",
+                                            textAlign: "center"
+                                        }}
+                                    >{localStorage.getItem("NUMBER_MASK-NETWORK")}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            )
+        )
+    }
+
     return (
         <div className={"container"}>
             <div className={"row align-items-center"}>
@@ -88,6 +125,9 @@ export function NombreRed() {
                     >
                         <b>{enableProcess ? "Ocultar" : "Mostrar"}</b>
                     </button>
+                </div>
+                <div className={"container"}>
+                {description()}
                 </div>
                 <div className={"my-3"}>
                     {createTables(ipArray[0], maskArray[0])}

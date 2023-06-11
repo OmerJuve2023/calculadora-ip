@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import "../../styles/stylesTypeRed.css"
 
 export function TypeRed() {
@@ -56,6 +56,34 @@ export function TypeRed() {
         )
     }
 
+    function description() {
+        return (
+            enableProcess && (
+
+                    <div className={"col-auto"}>
+                        <div className={"panel col-md-3"}>
+                            <div className={"panel-body"}>
+                                <table className={"table"}>
+                                    <tbody>
+                                    <tr>
+                                        <td>IP</td>
+                                        <td
+                                            style={{
+                                                alignItems: "center",
+                                                textAlign: "center"
+                                            }}
+                                        >{localStorage.getItem("NUMBER_IP")}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+            )
+        )
+    }
+
     return (
         <div className={"container"}>
             <div className={"row align-items-center"}>
@@ -79,6 +107,7 @@ export function TypeRed() {
                     </button>
                 </div>
             </div>
+            {description()}
             {validate(clase)}
         </div>
     )

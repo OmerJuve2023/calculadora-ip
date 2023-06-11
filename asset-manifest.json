@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/calculadora-ip/static/css/main.b8a7500a.css",
-    "main.js": "/calculadora-ip/static/js/main.0305256e.js",
+    "main.css": "/calculadora-ip/static/css/main.54ad533d.css",
+    "main.js": "/calculadora-ip/static/js/main.6bcb73f5.js",
     "static/js/787.2287992b.chunk.js": "/calculadora-ip/static/js/787.2287992b.chunk.js",
     "static/media/bootstrap-icons.woff?": "/calculadora-ip/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/imgCalculator.jpg": "/calculadora-ip/static/media/imgCalculator.2c16deb2217bfef8d746.jpg",
@@ -67,12 +67,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/calculadora-ip/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/calculadora-ip/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/calculadora-ip/index.html",
-    "main.b8a7500a.css.map": "/calculadora-ip/static/css/main.b8a7500a.css.map",
-    "main.0305256e.js.map": "/calculadora-ip/static/js/main.0305256e.js.map",
+    "main.54ad533d.css.map": "/calculadora-ip/static/css/main.54ad533d.css.map",
+    "main.6bcb73f5.js.map": "/calculadora-ip/static/js/main.6bcb73f5.js.map",
     "787.2287992b.chunk.js.map": "/calculadora-ip/static/js/787.2287992b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8a7500a.css",
-    "static/js/main.0305256e.js"
+    "static/css/main.54ad533d.css",
+    "static/js/main.6bcb73f5.js"
   ]
 }

@@ -15,13 +15,13 @@ direcciones IP, subredes y más.
 
 ## Uso
 
-1. **Clonar el Repositorio:**
+**Clonar el Repositorio:**
 
-   ```bash
-   git clone https://github.com/OmerJuve2023/calculadora-ip.git
+```bash
+git clone https://github.com/OmerJuve2023/calculadora-ip.git
    ```
 
-## Instalar Dependencias
+### Instalar Dependencias
 
 ```shell
 cd calculadora-ip
@@ -31,7 +31,7 @@ cd calculadora-ip
 npm install
 ```
 
-## Ejecutar la aplicación
+### Ejecutar la aplicación
 
  ```shell 
  npm run dev
@@ -40,6 +40,7 @@ npm install
 La aplicación estará disponible en http://calculadoraip.me/calculadora-ip/
 
 ## Capturas de Pantalla
+
 ![img_2.png](src/images_readme/img_2.png)
 ![img_3.png](src/images_readme/img_3.png)
 ![img_4.png](src/images_readme/img_4.png)
@@ -49,9 +50,11 @@ La aplicación estará disponible en http://calculadoraip.me/calculadora-ip/
 ![img_8.png](src/images_readme/img_8.png)
 ![img_9.png](src/images_readme/img_9.png)
 ![img_10.png](src/images_readme/img_10.png)
+
 ## Contribuciones
 
-¡Contribuciones son bienvenidas! Si tienes ideas para mejorar la calculadora, por favor abre un issue o envía un pull request.
+¡Contribuciones son bienvenidas! Si tienes ideas para mejorar la calculadora, por favor abre un issue o envía un pull
+request.
 Licencia
 
 **Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.**
